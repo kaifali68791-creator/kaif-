@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Profile photo placeholder">
+  <!-- REPLACE THIS FILE with your own photo, e.g. <img src="assets/photo.jpg" ...> in index.html -->
+  <rect width="400" height="400" fill="#e8edf3"/>
+  <circle cx="200" cy="155" r="62" fill="#b9c6d6"/>
+  <path d="M200 235c-60 0-108 38-114 88h228c-6-50-54-88-114-88z" fill="#b9c6d6"/>
+  <text x="200" y="372" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#8b98a8" text-anchor="middle">Your Photo</text>
+</svg>

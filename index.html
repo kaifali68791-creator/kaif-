@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0d">
+<title>Kaif — Diploma Student &amp; Web Developer</title>
+<meta name="description" content="Personal biodata and portfolio of Kaif, Diploma (Polytechnic) student in Computer Engineering (CME) and web developer from Gudur, Andhra Pradesh.">
+
+<!-- Favicon (inline, so no extra file and no 404 error) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0d'/><text x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' fill='%23e6394e' text-anchor='middle'>K</text></svg>">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- PWA: app manifest + icon for "Add to home screen" -->
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+<!-- Reveal animations. The class is added inline (before first paint) so the
+     page never flashes; if the script is blocked the class is never added and
+     every element stays visible. -->
+<script>document.documentElement.classList.add('js-reveal');</script>
+<script src="js/animations.js" defer></script>
+</head>
+<body>
+
+<!-- Thin scroll-progress bar (fixed, non-interactive) -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#home">Kaif</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#details">Details</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary btn-sm" href="#" data-placeholder download>Download Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= 1. HERO ================= -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Kaif</h1>
+      <p class="hero-role">Diploma (Polytechnic) Student <span class="dot">&bull;</span> Web Developer</p>
+      <p class="hero-intro">
+        Computer Engineering student interested in web development and app
+        development. I enjoy building practical projects and learning new
+        technologies with the help of modern development tools and AI.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#details">View My Details</a>
+        <a class="btn btn-outline" href="#contact">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <!-- Real photo: assets/profile.png (718x794). Square crop is handled by
+           CSS object-fit, so the photo is never stretched or distorted. -->
+      <img src="assets/profile.png" alt="Profile photo of Kaif" width="718" height="794">
+    </div>
+  </div>
+</section>
+<!-- ================= 2. ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card about-card">
+      <p>
+        I am a Computer Engineering student interested in web development
+        and app development. I enjoy building practical projects and learning
+        new technologies with the help of modern development tools and AI.
+        I have already built multiple apps and a website, and I am
+        continuously improving my development skills through hands-on
+        projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. EDUCATION ================= -->
+<section id="education" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+
+    <div class="grid grid-2">
+
+      <article class="card">
+        <p class="card-tag">Currently Pursuing</p>
+        <h3>Diploma (Polytechnic) &mdash; Computer Engineering</h3>
+        <p class="card-meta">Audisankara College of Engineering and Technology (Autonomous)</p>
+        <p class="card-desc">Branch: CME (Computer Engineering)</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- ================= 4. SKILLS ================= -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+
+    <!-- Skills: add or remove one <article class="card skill-card"> per skill.
+         Short, neutral wording only — no "expert" / "professional" claims. -->
+    <div class="grid skill-grid">
+
+      <article class="card skill-card"><h3>HTML</h3><p>Semantic page structure.</p></article>
+      <article class="card skill-card"><h3>CSS</h3><p>Responsive layouts with Flexbox and Grid.</p></article>
+      <article class="card skill-card"><h3>JavaScript</h3><p>Core logic, DOM events and interactivity.</p></article>
+      <article class="card skill-card"><h3>Git &amp; GitHub</h3><p>Version control, branches and repositories.</p></article>
+      <article class="card skill-card"><h3>Vibe Coding</h3><p>Building apps with AI using natural-language prompts.</p></article>
+      <article class="card skill-card"><h3>AI-Assisted Development</h3><p>Writing and refining code with AI tools.</p></article>
+      <article class="card skill-card"><h3>AI Video Generation</h3><p>Creating AI-generated video content.</p></article>
+      <article class="card skill-card"><h3>AI Image Generation</h3><p>Creating AI-generated images.</p></article>
+      <article class="card skill-card"><h3>AI Presentation Creation</h3><p>Building AI-assisted presentations.</p></article>
+      <article class="card skill-card"><h3>AI Development Tools</h3><p>AI coding assistants and code editors.</p></article>
+
+    </div>
+  </div>
+</section>
+<!-- ================= 5. PROJECTS ================= -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+
+    <p class="section-sub">3 of my projects. Each one is live and playable.</p>
+
+    <!-- ============ PROJECT CARDS ============
+         Exactly 3 real projects. For each one:
+           • <h3>              = project name
+           • <p class="card-desc"> = short description
+           • <ul class="tech-list">  = technologies/tools (delete the whole
+                                  <ul> if you have no tech list for a project)
+           • Live Demo button  = add target="_blank" rel="noopener noreferrer"
+           • GitHub button     = only add if you have a real repo URL
+         If a project has no GitHub repo, simply leave the GitHub
+         <a>...</a> out — the card stays consistent. -->
+
+    <div class="grid grid-3">
+
+      <article class="card project-card">
+        <h3>3D ULPIN Generator</h3>
+        <p class="card-desc">Interactive 3D web project, available as a live demo.</p>
+        <div class="card-actions">
+          <a class="btn btn-outline btn-sm" href="https://kaifali68791-creator.github.io/ULPIN-3D/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+      <article class="card project-card">
+        <h3>Smart Math Calculator</h3>
+        <p class="card-desc">Math calculator web app, deployed and online.</p>
+        <div class="card-actions">
+          <a class="btn btn-outline btn-sm" href="https://smart-math-calculator-kaif.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+      <article class="card project-card">
+        <h3>Funny Calculator</h3>
+        <p class="card-desc">Calculator web app published as a live demo.</p>
+        <div class="card-actions">
+          <a class="btn btn-outline btn-sm" href="https://kaifali68791-creator.github.io/funny-calculator/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- ================= 5b. CERTIFICATES ================= -->
+<!-- Certificate images live in assets/certificates/ as certificate-1.jpg,
+     certificate-2.jpg and certificate-3.jpg. To swap one out, replace the
+     file and update its <img> src and alt text. Nothing else needs to change. -->
+<section id="certificates" class="section">
+  <div class="container">
+    <h2 class="section-title">Certificates</h2>
+    <p class="section-sub">Academic and achievement certificates.</p>
+
+    <div class="cert-grid">
+      <figure class="card cert-item">
+        <img src="assets/certificates/certificate-1.jpg" alt="CodeSprint-2026 Certificate of Participation awarded by Audisankara (Deemed to be University) for actively participating in an 8-hours national level hackathon." loading="lazy">
+        <figcaption>CodeSprint-2026 &mdash; Certificate of Participation, Audisankara (Deemed to be University)</figcaption>
+      </figure>
+
+      <figure class="card cert-item">
+        <img src="assets/certificates/certificate-2.jpg" alt="Bihar School Examination Board certificate for the Secondary School Examination 2024, showing the examination subjects and the result of First Division." loading="lazy">
+        <figcaption>BSEB Secondary School Examination 2024 &mdash; First Division</figcaption>
+      </figure>
+
+      <figure class="card cert-item">
+        <img src="assets/certificates/certificate-3.jpg" alt="Provisional Certificate issued by the Bihar School Examination Board, Patna for the Annual Secondary School Examination 2024, placing the candidate in First Division." loading="lazy">
+        <figcaption>BSEB Provisional Certificate, Secondary School Examination 2024 &mdash; First Division</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- ================= 6. PERSONAL DETAILS ================= -->
+<section id="details" class="section">
+  <div class="container">
+    <h2 class="section-title">Personal Details</h2>
+
+    <div class="card">
+      <dl class="details-list">
+        <div class="details-row">
+          <dt>Full Name</dt><dd>Kaif</dd>
+        </div>
+        <div class="details-row">
+          <dt>Year of Birth</dt>
+          <dd>2008</dd>
+        </div>
+        <div class="details-row">
+          <dt>Location</dt><dd>Gudur, Andhra Pradesh</dd>
+        </div>
+        <div class="details-row">
+          <dt>Email</dt>
+          <dd><a href="mailto:mdkaifalisaikh@gmail.com">mdkaifalisaikh@gmail.com</a></dd>
+        </div>
+        <div class="details-row">
+          <dt>Phone</dt>
+          <dd><a href="tel:+919504283875">+91 95042 83875</a></dd>
+        </div>
+        <div class="details-row">
+          <dt>Languages</dt>
+          <dd>English, Hindi, Urdu</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+<!-- ================= 7. CONTACT ================= -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+
+    <!-- CHANGE: to add LinkedIn later, set href and remove data-placeholder -->
+    <!-- Icons are lightweight inline SVG (no icon library, no extra files).
+         Each icon is aria-hidden because the text next to it already
+         describes the contact type. -->
+    <div class="grid contact-grid">
+
+      <a class="card contact-card" href="mailto:mdkaifalisaikh@gmail.com">
+        <h3>Email</h3>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span class="contact-value">mdkaifalisaikh@gmail.com</span>
+        </p>
+      </a>
+
+      <a class="card contact-card" href="https://wa.me/919504283875" target="_blank" rel="noopener noreferrer">
+        <h3>WhatsApp</h3>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+          <span class="contact-value">+91 95042 83875</span>
+        </p>
+      </a>
+
+      <div class="card contact-card contact-static">
+        <h3>Location</h3>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="contact-value">Gudur, Andhra Pradesh</span>
+        </p>
+      </div>
+
+      <a class="card contact-card" href="https://github.com/kaifali68791-creator" target="_blank" rel="noopener noreferrer">
+        <h3>GitHub</h3>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span class="contact-value">kaifali68791-creator</span>
+        </p>
+      </a>
+
+      <a class="card contact-card" href="#" data-placeholder><h3>LinkedIn</h3><p class="pending">Not added yet</p></a>
+
+      <a class="card contact-card" href="https://www.instagram.com/kaifa1i/" target="_blank" rel="noopener noreferrer">
+        <h3>Instagram</h3>
+        <p class="contact-line">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <span class="contact-value">@kaifa1i</span>
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. RESUME ================= -->
+<section id="resume" class="section">
+  <div class="container resume-box">
+    <h2 class="section-title">Resume</h2>
+    <p class="section-sub">A quick summary of my education and skills.</p>
+    <!-- CHANGE: point this to assets/resume/your-file.pdf and remove data-placeholder -->
+    <a class="btn btn-primary" href="#" data-placeholder download>Download Resume</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year">2026</span> Kaif. All rights reserved.</p>
+    <p class="footer-sub">Gudur, Andhra Pradesh &nbsp;&bull;&nbsp; <a href="mailto:mdkaifalisaikh@gmail.com">mdkaifalisaikh@gmail.com</a> &nbsp;&bull;&nbsp; <a href="tel:+919504283875">+91 95042 83875</a></p>
+  </div>
+</footer>
+
+<!-- Message shown when a not-yet-filled placeholder link is clicked -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Back to top (hidden until you scroll down) -->
+<button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
