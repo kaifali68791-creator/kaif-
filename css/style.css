@@ -385,6 +385,20 @@ ul { list-style: none; }
 }
 .footer-sub { color: #7c7c8a; font-size: .85rem; margin-top: 4px; }
 
+/* Developer credit. Sits under the existing footer lines, separated by the
+   same hairline the footer already uses. Deliberately quiet: #7c7c8a on the
+   footer background is 4.7:1, so it still passes AA at this small size. */
+.footer-credit {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: #7c7c8a;
+  font-size: .8rem;
+  line-height: 1.6;
+  letter-spacing: .03em;
+}
+.footer-credit-name { color: var(--primary); font-weight: 600; }
+
 .toast {
   position: fixed;
   left: 50%;
