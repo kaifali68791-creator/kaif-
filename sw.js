@@ -15,7 +15,7 @@
 
 /* Bump this whenever you ship an update. The activate step deletes every
    cache that does not match, so users never get a stale mix of versions. */
-var CACHE_VERSION = "v1";
+var CACHE_VERSION = "v2";
 var CACHE_NAME = "kaif-portfolio-" + CACHE_VERSION;
 
 /* The small files needed to render the page with no connection. */
