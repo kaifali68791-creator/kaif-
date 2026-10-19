@@ -76,6 +76,30 @@ self.addEventListener("fetch", function (event) {
   }
   if (url.origin !== self.location.origin) return;
 
+  /* HTML page navigations: fetch from the network first so a normal refresh
+     always picks up an updated index.html when online. When offline, fall back
+     to the cached shell so the app still opens instead of showing an error. */
+  if (request.mode === "navigate") {
+    event.respondWith(
+      fetch(request).then(function (response) {
+        /* Only store real, successful, same-origin responses. Opaque and
+           error responses are skipped so the cache cannot go bad. */
+        if (response && response.status === 200 && response.type === "basic") {
+          var copy = response.clone();
+          caches.open(CACHE_NAME).then(function (cache) {
+            cache.put(request, copy);
+          });
+        }
+        return response;
+      }).catch(function () {
+        return caches.match("./index.html") || Response.error();
+      })
+    );
+    return;
+  }
+
+  /* All other same-origin GETs (CSS, JS, images, icons): cache-first, then
+     network, then cache the result. Preserves fast repeat visits and offline. */
   event.respondWith(
     caches.match(request).then(function (cached) {
       if (cached) return cached;
@@ -91,11 +115,6 @@ self.addEventListener("fetch", function (event) {
         }
         return response;
       }).catch(function () {
-        /* Offline and not cached: fall back to the cached page for navigations
-           so the app still opens rather than showing the browser error. */
-        if (request.mode === "navigate") {
-          return caches.match("./index.html");
-        }
         return Response.error();
       });
     })
